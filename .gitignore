@@ -1,2 +1,7 @@
 #ignore pycache
 /__pycache__
+#ignore env file
+*.env
+
+#test file
+functions/test.py

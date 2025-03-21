@@ -18,6 +18,7 @@ def getPlanet(name):
             return i
 
     return None
+   
 
 def sendPlanetInfo(Planet):
     print("Planet: " + Planet['name'])
