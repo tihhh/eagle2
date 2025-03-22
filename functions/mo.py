@@ -53,6 +53,7 @@ class MajorOrderHandler():
     def returnSeconds(self, data):
         return data[2]
 
+    
     def formatTasks(self, data):
     #data format: ["brief", {'Task': 12, 3: 8, 1: 3, 11: 0, 12: 0}, ]
         print(str(data[0]))

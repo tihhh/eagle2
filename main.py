@@ -2,19 +2,26 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from dotenv import load_dotenv
+import os
 from os import getenv
+import asyncio
 
 from functions import apidata, mo
 
 load_dotenv(".env")
 
+intents = discord.Intents.default()
+intents.message_content = True
 class Client(commands.Bot):
     def __init__(self):
+        super().__init__(
+            intents=intents,
+            command_prefix="!"
+        )
         self.data = apidata.APIData()
 
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-
         try:
             guild = discord.Object(id=getenv('GUILD_ID'))
             synced = await self.tree.sync(guild=guild)
@@ -32,18 +39,14 @@ class Client(commands.Bot):
         await reaction.message.channel.send('You reacted')
 
 
-intents = discord.Intents.default()
-intents.message_content = True
-client = Client(command_prefix="!!", intents=intents)
 
-@client.tree.command(name="hello", description="Say hello!", guild=discord.Object(id=getenv('GUILD_ID')))
-async def sayHello(interaction: discord.Interaction):
-    await interaction.response.send_message("Hi there!")
+client = Client()
 
-@client.tree.command(name="printer", description="print whatever", guild=discord.Object(id=getenv('GUILD_ID')))
-async def printer(interaction: discord.Interaction, printer: str):
-    await interaction.response.send_message(printer)
-
+async def loadCogs():
+    for filename in os.listdir('./cogs'):
+        if filename.endswith(".py"):
+            await client.load_extension(f"cogs.{filename[:-3]}")
+loadCogs()
 @client.tree.command(name="embed", description="embed demo", guild=discord.Object(id=getenv('GUILD_ID')))
 async def embed(interaction: discord.Interaction):
     embed=discord.Embed(title="MAJOR ORDER", description="Defend against the Automaton offensive, led by the newly-built Incineration Corps, or collect enough E-710 to activate the Penrose Energy Siphon and reduce Dark Energy Accumulation.", color=0xff0000)
@@ -54,4 +57,7 @@ async def embed(interaction: discord.Interaction):
     embed.set_footer(text="Major order ends in 66h")
     await interaction.response.send_message(embed=embed)
 
+
 client.run(getenv('TOKEN'))
+
+

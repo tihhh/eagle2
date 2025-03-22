@@ -7,9 +7,9 @@ def progressBar(perc):
     return f'[{bar}] {perc:.2f}%'
 
 intervals = (
-    ('weeks', 604800),  # 60 * 60 * 24 * 7
-    ('days', 86400),    # 60 * 60 * 24
-    ('hours', 3600),    # 60 * 60
+    ('weeks', 604800),  
+    ('days', 86400),    
+    ('hours', 3600),    
     ('minutes', 60),
     ('seconds', 1),
 )
