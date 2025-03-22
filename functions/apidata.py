@@ -20,9 +20,19 @@ class APIData:
                     i +=1
 
                 tasks.append(taskDict)
-            self.mo = [self.api[0]['setting']['overrideBrief'],tasks]
+            rewards = []
+            for reward in self.api[0]['setting']['rewards']:
+                #return ["type", "amount"]
+                rewards.append([reward['type'], reward['amount']])
+                
+            self.mo = [self.api[0]['setting']['overrideBrief'], #MO Brief
+                       tasks, #Tasks
+                       self.api[0]['expiresIn'], #Expire (seconds)
+                       self.api[0]['progress'], #Progress 
+                       rewards #Rewards for winning Major Order
+                       ]
         except:
-            pass
+            print("Failed to fetch")
 
     def getMajorOrder(self):
         return self.mo
