@@ -16,7 +16,11 @@ class MajorOrder(commands.Cog):
         print(f"{__name__} is online")
     
 
-    @app_commands.command(name="embed", description="embed demo", guild=discord.Object(id=getenv('GUILD_ID')))
-    async def majorOrder(interaction: discord.Interaction)->None:
-        print("say hi")
+    @discord.app_commands.command(name="majororder", description="Returns the current major order")
+    @discord.app_commands.guilds(discord.Object(id=getenv('GUILD_ID')))
+    async def majorOrder(self, interaction: discord.Interaction):
+        await interaction.response.send_message("PUT MO HERE PLEASE")
     
+
+async def setup(bot):
+    await bot.add_cog(MajorOrder(bot))

@@ -42,11 +42,11 @@ class Client(commands.Bot):
 
 client = Client()
 
-async def loadCogs():
+async def load():
     for filename in os.listdir('./cogs'):
         if filename.endswith(".py"):
             await client.load_extension(f"cogs.{filename[:-3]}")
-loadCogs()
+
 @client.tree.command(name="embed", description="embed demo", guild=discord.Object(id=getenv('GUILD_ID')))
 async def embed(interaction: discord.Interaction):
     embed=discord.Embed(title="MAJOR ORDER", description="Defend against the Automaton offensive, led by the newly-built Incineration Corps, or collect enough E-710 to activate the Penrose Energy Siphon and reduce Dark Energy Accumulation.", color=0xff0000)
@@ -57,7 +57,9 @@ async def embed(interaction: discord.Interaction):
     embed.set_footer(text="Major order ends in 66h")
     await interaction.response.send_message(embed=embed)
 
+async def main():
+    await load()
+    await client.start(getenv('TOKEN'))
 
-client.run(getenv('TOKEN'))
-
-
+if __name__ == "__main__":
+    asyncio.run(main())
