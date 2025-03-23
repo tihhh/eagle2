@@ -53,7 +53,40 @@ class MajorOrderHandler():
     def returnSeconds(self, data):
         return data[2]
 
+    def returnTasks(self, data):
+        tasks = []
+        tv = 0
+        for order in data[1]:
+            task = []
+            if (order['Task'] == 12):
+                task.append("Defend " + str(order['3']) + " attacks from the " + str(faction[str(order['1'])]))
+                task.append(order['3'])
+                task.append(data[3][tv])
+                tasks.append(task)
+            elif (order['Task'] == 3):
+            #{'Task': 3, '1': 2, '2': 1, '3': 1250000000, '4': 0, '6': 0, '5': 0, '8': 0, '9': 0, '11': 0, '12': 0}]]
+                if(order['4'] == 0):
+                    task.append("Eradicate " + f"{order['3']:,}" + " " + str(faction[str(order['1'])]))
+                    task.append(order['3'])
+                    task.append(data[3][tv])
+                    tasks.append(task)
+                else:
+                    task.append("Eradicate " + f"{order['3']:,}" + " " + "SOMETHING")
+                    task.append(order['3'])
+                    task.append(data[3][tv])
+                    tasks.append(task)
+            
+            else:
+                task.append("Task not mapped yet.")
+                task.append(order['3'])
+                task.append(data[3][tv])
+                tasks.append(task)
+            tv +=1
+        return tasks
     
+                
+
+
     def formatTasks(self, data):
     #data format: ["brief", {'Task': 12, 3: 8, 1: 3, 11: 0, 12: 0}, ]
         print(str(data[0]))
