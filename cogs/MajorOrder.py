@@ -11,11 +11,11 @@ from functions.func import progressBar, timeConvert
 
 load_dotenv(".env")
 
-class MajorOrder(commands.Cog):
+class MajorOrderCog(commands.Cog):
     def __init__(self, bot : Client):
         self.bot = bot
         self.MOHandler = MajorOrderHandler()
-        self.data = bot.getData().mo
+        self.data = bot.getData().getPlanets()
     
     @commands.Cog.listener()
     async def on_ready(self):
@@ -35,4 +35,4 @@ class MajorOrder(commands.Cog):
     
 
 async def setup(bot):
-    await bot.add_cog(MajorOrder(bot))
+    await bot.add_cog(MajorOrderCog(bot))

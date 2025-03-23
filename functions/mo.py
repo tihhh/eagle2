@@ -1,6 +1,6 @@
-import requests
+import os
 
-API = "https://api.diveharder.com/v1/major_order"
+from functions.func import *
 
 """
 	"1": "Humans",
@@ -45,7 +45,7 @@ class MajorOrderHandler():
     # [2, 588353971], 
     # [[1, 55]]]
     def __init__(self):
-        pass
+        self.planets = loadJson(os.path.join(os.path.dirname(__file__), '../data', 'planets.json'))
     
     def returnBrief(self, data):
         return data[0]
@@ -75,6 +75,16 @@ class MajorOrderHandler():
                     task.append(order['3'])
                     task.append(data[3][tv])
                     tasks.append(task)
+            elif(order['Task'] == 11):
+                task.append("Liberate " + f"{self.planets[order['12']]['name']}")
+                task.append(order['3'])
+                task.append(data[3][tv])
+                tasks.append(task)
+            elif(order['Task'] == 13):
+                task.append("Hold " + f"{self.planets[order['12']]['name']}" + " until the order ends")
+                task.append(order['3'])
+                task.append(data[3][tv])
+                tasks.append(task)
             
             else:
                 task.append("Task not mapped yet.")
@@ -86,23 +96,4 @@ class MajorOrderHandler():
     
                 
 
-
-    def formatTasks(self, data):
-    #data format: ["brief", {'Task': 12, 3: 8, 1: 3, 11: 0, 12: 0}, ]
-        print(str(data[0]))
-        for order in data[1]:
-            if (order['Task'] == 12):
-                if (order['12'] == 0):
-                    print("Defend " + str(order['3']) + " attacks from the " + str(faction[str(order['1'])]))
-                else:
-                    pass
-            elif(order['Task'] == 3):
-                #{'Task': 3, '1': 2, '2': 1, '3': 1250000000, '4': 0, '6': 0, '5': 0, '8': 0, '9': 0, '11': 0, '12': 0}]]
-                if(order['4'] == 0):
-                    print("Eradicate " + f"{order['3']:,}" + " " + str(faction[str(order['1'])]))
-                else:
-                    print("Eradicate " + f"{order['3']:,}" + " " + "SOMETHING")
-        
-            else:
-                print("UNKNOWN TASK")
     

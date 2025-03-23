@@ -1,16 +1,17 @@
 import requests
 
-API = "https://api.diveharder.com/v1/major_order"
+MO_API = "https://api.diveharder.com/v1/major_order"
 class APIData:
     def __init__(self):
-        self.api = requests.get(API).json()
+        self.moAPI = requests.get(MO_API).json()
         self.mo = None
+        self.planets = requests.get("https://helldiverstrainingmanual.com/api/v1/war/campaign").json()
 
     def callMajorOrderAPI(self):
         #Major order
         try:
             tasks = []
-            for item in self.api[0]['setting']['tasks']:
+            for item in self.moAPI[0]['setting']['tasks']:
                 taskDict = {}
                 taskDict.update({"Task" : item['type']})
                 values = []
@@ -21,18 +22,23 @@ class APIData:
 
                 tasks.append(taskDict)
             rewards = []
-            for reward in self.api[0]['setting']['rewards']:
+            for reward in self.moAPI[0]['setting']['rewards']:
                 #return ["type", "amount"]
                 rewards.append([reward['type'], reward['amount']])
                 
-            self.mo = [self.api[0]['setting']['overrideBrief'], #MO Brief
+            self.mo = [self.moAPI[0]['setting']['overrideBrief'], #MO Brief
                        tasks, #Tasks
-                       self.api[0]['expiresIn'], #Expire (seconds)
-                       self.api[0]['progress'], #Progress 
+                       self.moAPI[0]['expiresIn'], #Expire (seconds)
+                       self.moAPI[0]['progress'], #Progress 
                        rewards #Rewards for winning Major Order
                        ]
         except:
             print("Failed to fetch")
+
+    def getPlanets(self):
+        return self.planets
+
+    
 
     def getMajorOrder(self):
         return self.mo
