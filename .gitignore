@@ -1,10 +1,9 @@
 #ignore pycache
-/__pycache__
+__pycache__/
 #ignore env file
 *.env
 
 #test file
 functions/test.py
 
-cogs/__pycache__
-functions/__pycache__
+
