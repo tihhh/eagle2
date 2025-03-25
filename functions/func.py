@@ -1,4 +1,4 @@
-import json
+import json, time
 
 def progressBar(perc):
     total = 100
@@ -43,3 +43,9 @@ def loadJson(file_path):
     except Exception as e:
         print(f"Error loading JSON from {file_path}: {e}")
         return None
+
+def time_until_target(target_timestamp):
+    current_timestamp = int(time.time())
+    time_difference = target_timestamp - current_timestamp
+    
+    return time_difference

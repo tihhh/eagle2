@@ -1,87 +1,108 @@
 {
 	"arctic_glacier_base": {
 		"name": "Icy Glaciers",
-		"description": "Submerged in eternal winter, this world's frosty peaks glimmer in the light of its too-distant star."
+		"description": "Submerged in eternal winter, this world's frosty peaks glimmer in the light of its too-distant star.",
+		"image_link": "https://static.wikia.nocookie.net/helldivers_gamepedia/images/9/9d/Arctic_Landscape.png/revision/latest?cb=20240221184358"
 	},
 	"arctic_glacier_coldrocky": {
 		"name": "Boneyard",
-		"description": "Ice and moss-covered rock can be found across most of the surface of this planet."
+		"description": "Ice and moss-covered rock can be found across most of the surface of this planet.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/2/24/Frozen_Boneyard_Landscape.png/revision/latest?cb=20240221183801"
 	},
 	"arctic_glacier_tien_kwan": {
 		"name": "Tien Kwan Special",
-		"description": "Ice and moss-covered rock can be found across most of the surface of this planet."
+		"description": "Ice and moss-covered rock can be found across most of the surface of this planet.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/2/24/Frozen_Boneyard_Landscape.png/revision/latest?cb=20240221183801"
 	},
 	"blackhole": {
 		"name": "Black Hole",
-		"description": "The planet is gone, the ultimate price to pay in the war for humanity's survival."
+		"description": "The planet is gone, the ultimate price to pay in the war for humanity's survival.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/8/88/Black_Hole_Landscape.png/revision/latest?cb=20250127204203"
 	},
 	"moor_arid": {
 		"name": "Scorched Moor",
-		"description": "Scorching temperatures, high winds, and low precipitation cause a near-constant cycle of fires to sweep this planet, punctuated by short bursts of lush rebirth between infernos."
+		"description": "Scorching temperatures, high winds, and low precipitation cause a near-constant cycle of fires to sweep this planet, punctuated by short bursts of lush rebirth between infernos.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/7/77/Scorched_Wasteland_Landscape.png/revision/latest?cb=20240221185653"
 	},
 	"moor_baseplanet": {
 		"name": "Plains",
-		"description": "Rocky outcroppings punctuate fields of tall grass in a planet dominated by misty highland terrain."
+		"description": "Rocky outcroppings punctuate fields of tall grass in a planet dominated by misty highland terrain.",
+		"image_link": "https://static.wikia.nocookie.net/helldivers_gamepedia/images/9/9f/Grassland_Landscape.png/revision/latest?cb=20240217005906"
 	},
 	"moor_red": {
 		"name": "Ionic Crimson",
-		"description": "A crimson algae has propagated wildly across this entire planet, coating its rocky hills with a constant red that masks the spilt blood of the heroes who defend it from tyranny."
+		"description": "A crimson algae has propagated wildly across this entire planet, coating its rocky hills with a constant red that masks the spilt blood of the heroes who defend it from tyranny.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/4/43/Ionized_Grassland_Landscape.png/revision/latest?cb=20240221183209"
 	},
 	"moor_tundra": {
 		"name": "Tundra",
-		"description": "A perennially chilly climate has allowed short, colorful shrubs to flourish across this planet's surface."
+		"description": "A perennially chilly climate has allowed short, colorful shrubs to flourish across this planet's surface.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/0/0e/Tundra_Landscape.png/revision/latest?cb=20240305023955"
 	},
 	"primordial_base": {
 		"name": "Volcanic Jungle",
-		"description": "Abundant with life, this wet planet is covered in deep oceans, thick forests, and tall grasses."
+		"description": "Abundant with life, this wet planet is covered in deep oceans, thick forests, and tall grasses.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/d/da/Sparse_Jungle_Landscape.png/revision/latest?cb=20240217000654"
 	},
 	"primordial_blue": {
 		"name": "Ionic Jungle",
-		"description": "The strange subversion of photosynthesis that sustains the oddly-hued flora that flourishes on this planet remains an intriguing mystery to Super Earth's greatest exo-biologists."
+		"description": "The strange subversion of photosynthesis that sustains the oddly-hued flora that flourishes on this planet remains an intriguing mystery to Super Earth's greatest exo-biologists.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/2/28/Shadowed_Jungle_Landscape.png/revision/latest?cb=20240217012435"
 	},
 	"primordial_bug": {
 		"name": "Supercolony",
-		"description": "Entirely unforeseeable mutations from the Termicide led to hyper-accelerated bug growth on this planet, turning it into a Supercolony. It is corrupted beyond saving. The bugs infest every inch of it, down to the mantle, spawning trillions of spores every day."
+		"description": "Entirely unforeseeable mutations from the Termicide led to hyper-accelerated bug growth on this planet, turning it into a Supercolony. It is corrupted beyond saving. The bugs infest every inch of it, down to the mantle, spawning trillions of spores every day.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/5/5f/Supercolony_Landscape.png/revision/latest?cb=20240501044651"
 	},
 	"primordial_dead": {
 		"name": "Deadlands",
-		"description": "The lifeless grey of this planet is interrupted only by the violet flowers that grow from strange, parasitic outcroppings."
+		"description": "The lifeless grey of this planet is interrupted only by the violet flowers that grow from strange, parasitic outcroppings.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/1/1f/Ashland_Landscape.png/revision/latest?cb=20240325005015"
 	},
 	"primordial_purple": {
 		"name": "Ethereal Jungle",
-		"description": "This world teems with ethereal, boundless, and peculiar plant life that spreads silent and uninterrupted across its entire surface."
+		"description": "This world teems with ethereal, boundless, and peculiar plant life that spreads silent and uninterrupted across its entire surface.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/9/93/Ethereal_Jungle_Landscape.png/revision/latest?cb=20240217004829"
 	},
 	"sandy_acid": {
 		"name": "Acidic Badlands",
-		"description": "Dense, toxic fumes from deep within the planet's crust seep out of cracks in the earth and coat the ground in a sickly haze."
+		"description": "Dense, toxic fumes from deep within the planet's crust seep out of cracks in the earth and coat the ground in a sickly haze.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/4/4d/Acidic_Desert_Landscape.png/revision/latest?cb=20240409162937"
 	},
 	"sandy_base": {
 		"name": "Desert Dunes",
-		"description": "A blazing-hot desert planet, its rocky mesas are the sole interruptions to the endless sea of dunes."
+		"description": "A blazing-hot desert planet, its rocky mesas are the sole interruptions to the endless sea of dunes.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/8/89/Sandy_Mesa_Landscape.png/revision/latest?cb=20240217013044"
 	},
 	"sandy_mineral": {
 		"name": "Rocky Canyons",
-		"description": "This arid, rocky biome covering this world has driven the evolution of exceptionally efficient water usage in its various organisms."
+		"description": "This arid, rocky biome covering this world has driven the evolution of exceptionally efficient water usage in its various organisms.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/8/8f/Copper_Desert_Landscape.png/revision/latest?cb=20240318193305"
 	},
 	"sandy_moon": {
 		"name": "Moon",
-		"description": "A rocky, lonely moon with extremely valuable mineral deposits underneath the surface."
+		"description": "A rocky, lonely moon with extremely valuable mineral deposits underneath the surface.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/0/04/Barren_Moon_Landscape.png/revision/latest?cb=20240217004335"
 	},
 	"sandy_spiky": {
 		"name": "Desert Cliffs",
-		"description": "A desert planet prone to unpredictable and dangerous sand twisters."
+		"description": "A desert planet prone to unpredictable and dangerous sand twisters.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/4/41/Quake_Desert_Landscape.png/revision/latest?cb=20240216234130"
 	},
 	"super_earth": {
 		"name": "Super Earth",
-		"description": "Super Earth is the blinding beacon that shines the light of democracy through the stars. The sprawling heart that beats in time to mankind's quest of liberation. Here live the wealthy, important and proud. Here live those who have pulled themselves up by their bootstraps and achieved their dreams. Here live the citizens of Super Earth."
+		"description": "Super Earth is the blinding beacon that shines the light of democracy through the stars. The sprawling heart that beats in time to mankind's quest of liberation. Here live the wealthy, important and proud. Here live those who have pulled themselves up by their bootstraps and achieved their dreams. Here live the citizens of Super Earth.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/a/ae/Super_Earth_Landscape.png/revision/latest?cb=20240820193217"
 	},
 	"swamp_base": {
 		"name": "Basic Swamp",
-		"description": "Tall, gnarled trees flourish across the surface of this forested world. Sunlight filters past dangling vines, to the saturated undergrowth below."
+		"description": "Tall, gnarled trees flourish across the surface of this forested world. Sunlight filters past dangling vines, to the saturated undergrowth below.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/8/8e/Swamp_Landscape.png/revision/latest?cb=20240821091855"
 	},
 	"swamp_haunted": {
 		"name": "Haunted Swamp",
-		"description": "Squelching mud, twisting roots; the odor of rot and anarchy. A teeming, endless morass."
+		"description": "Squelching mud, twisting roots; the odor of rot and anarchy. A teeming, endless morass.",
+		"image_link":"https://static.wikia.nocookie.net/helldivers_gamepedia/images/f/fa/Foggy_Swamp_Landscape.png/revision/latest?cb=20250127204848"
 	},
 	"unknown": {
 		"name": "Unknown",

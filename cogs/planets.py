@@ -27,12 +27,14 @@ class PlanetsCog(commands.Cog):
         if currentPlanet != None:
             embed=discord.Embed(title=currentPlanet['name'], description=self.handler.returnBiome(currentPlanet)[1])
             embed.set_thumbnail(url=self.handler.returnOwnerLogo(currentPlanet))
-            embed.set_image(url="https://static.wikia.nocookie.net/helldivers_gamepedia/images/9/9d/Arctic_Landscape.png")
+            embed.set_image(url=self.handler.returnBiome(currentPlanet)[2])
             embed.add_field(name="Players", value=currentPlanet['players'], inline=True)
             embed.add_field(name="Progress", value=progressBar(currentPlanet['percentage']), inline=False)
+            if currentPlanet['expireDateTime'] != None:
+                embed.set_footer(text="Time until planet falls: "+ timeConvert(int(self.handler.getDefense(currentPlanet))))
             await interaction.response.send_message(embed=embed)
         else:
-            await interaction.response.send_message("Planet not found")
+            await interaction.response.send_message("Planet name is incorrect or is not active (no war is happening)")
 
 
 async def setup(bot):
