@@ -1,12 +1,13 @@
 import requests
 
-MO_API = "https://helldiverstrainingmanual.com/api/v1/war/major-orders"
 class APIData:
     def __init__(self):
-        self.moAPI = requests.get(MO_API).json()
+        self.moAPI = requests.get("https://helldiverstrainingmanual.com/api/v1/war/major-orders").json()
         self.mo = None
         self.planets = requests.get("https://helldiverstrainingmanual.com/api/v1/war/campaign").json()
         self.planetStatus = requests.get("https://helldiverstrainingmanual.com/api/v1/war/status").json()
+        self.news = requests.get("https://api.diveharder.com/v1/news_feed").json()
+        self.callMajorOrderAPI()
 
     def callMajorOrderAPI(self):
             

@@ -19,7 +19,6 @@ class Client(commands.Bot):
             command_prefix="!"
         )
         self.data = apidata.APIData()
-        self.data.callMajorOrderAPI()
 
     async def on_ready(self):
         print(f'Logged on as {self.user}!')

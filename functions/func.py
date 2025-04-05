@@ -1,11 +1,28 @@
-import json, time
+import json, time, re
 
 def progressBar(perc):
     total = 100
     length = 10
     filled_length = int(length * perc/total)
-    bar = '+' * filled_length + '-' * (length - filled_length)
-    return f'[{bar}] {perc:.2f}%'
+    bar = '█' * filled_length + '░' * (length - filled_length)
+    return f'|{bar}| {perc:.2f}%'
+
+
+def strip_all_markup(text):
+    # Remove custom tags like <i=1>, <voice=3>, etc.
+    text = re.sub(r'<[^>]+>', '', text)
+    
+    # Remove common Markdown symbols (bold, italic, strikethrough, inline code)
+    text = re.sub(r'(\*\*|\*|__|_|~~|`)', '', text)
+    
+    # Remove HTML entities like &nbsp;, &lt;, etc. (optional)
+    text = re.sub(r'&[a-zA-Z]+;', '', text)
+    
+    # Optional: Normalize whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    
+    return text
+
 
 intervals = (
     ('weeks', 604800),  
