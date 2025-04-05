@@ -107,5 +107,10 @@
 	"unknown": {
 		"name": "Unknown",
 		"description": "This planet's biome is unknown at this time."
+	},
+	"fractured_planet" : {
+		"name": "Fractured Planet",
+		"description": "All that remains of a planet torn apart by the Meridian singularity. A solemn reminder of the desolation Tyranny leaves in its wake.",
+		"image_link" : "https://helldivers.wiki.gg/images/thumb/0/06/Fractured_Planet_Header.png/300px-Fractured_Planet_Header.png?d87631"
 	}
 }

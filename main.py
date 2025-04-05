@@ -30,9 +30,6 @@ class Client(commands.Bot):
         except Exception as e:
             print(f'Error syncing commands: {e}')
     
-    
-    async def on_reaction_add(self, reaction, user):
-        await reaction.message.channel.send('You reacted')
 
     def getData(self):
         return self.data
